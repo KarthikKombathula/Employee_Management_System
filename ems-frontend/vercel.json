@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "http://ems-backend-env.eba-tppm7izi.eu-north-1.elasticbeanstalk.com/api/:path*"
+    }
+  ]
+}

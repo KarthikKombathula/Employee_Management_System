@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 
-const REST_API_BASE_URL='http://ems-backend-env.eba-tppm7izi.eu-north-1.elasticbeanstalk.com/api/v1/employees'
+const REST_API_BASE_URL='/api/v1/employees'
 
 export const listEmployees = () =>
 {
