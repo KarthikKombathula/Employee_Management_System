@@ -100,7 +100,8 @@ const EmployeeComponent = () => {
     <div className="container">
       <br />
       <div className="row">
-        <div className="card col-md-6 offset-md-3">
+        {/* <div className="card col-md-6 offset-md-3"> */}
+<div className="card col-12 col-md-6 offset-md-3">
           <br />
           {pageTitle()}
 

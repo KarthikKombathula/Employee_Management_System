@@ -40,50 +40,50 @@ const ListEmployeeComponent = () => {
       });
   }
   return (
-    <div className="container">
-      {" "}
+    <div className="container-fluid px-2 px-md-4">
       <br />
-      <br /> <h2 className="text-center">List of Employees</h2> <br />
+      <h2 className="text-center">List of Employees</h2>
+      <br />
       <button className="btn btn-primary mb-3" onClick={addNewEmployee}>
         Add Employee
       </button>
-      <table className="table table-striped table-bordered">
-        <thead>
-          <tr>
-            <th>Employee ID</th>
-            <th>Employee First Name</th>
-            <th>Employee Last Name</th>
-            <th>Employee Email ID</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {employees.map((employee) => (
-            <tr key={employee.id}>
-              <td>{employee.id}</td>
-              <td>{employee.firstName}</td>
-              <td>{employee.lastName}</td>
-              <td>{employee.email}</td>
-              <td>
-                <button
-                  className="btn btn-info"
-                  onClick={() => updateEmployee(employee.id)}
-                >
-                  Update
-                </button>
-                <button
-                  className="btn btn-danger"
-                  style={{ marginLeft: "15px" }}
-                  onClick={() => removeEmployee(employee.id)}
-                >
-                  Delete
-                </button>
-              </td>
+      <div className="table-responsive">
+        <table className="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>Employee ID</th>
+              <th>Employee First Name</th>
+              <th>Employee Last Name</th>
+              <th>Employee Email ID</th>
+              <th>Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {employees.map((employee) => (
+              <tr key={employee.id}>
+                <td>{employee.id}</td>
+                <td>{employee.firstName}</td>
+                <td>{employee.lastName}</td>
+                <td>{employee.email}</td>
+                <td>
+                  <button
+                    className="btn btn-info btn-sm me-2"
+                    onClick={() => updateEmployee(employee.id)}
+                  >
+                    Update
+                  </button>
+                  <button
+                    className="btn btn-danger btn-sm"
+                    onClick={() => removeEmployee(employee.id)}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
